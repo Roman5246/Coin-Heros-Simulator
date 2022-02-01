@@ -38,18 +38,10 @@ section1:addToggle("Auto sell", nil, function(value)
     getgenv().autosell = value
     while true do
         if not getgenv().autosell then break end
-        local Event = game:GetService("ReplicatedStorage").Remotes.Sell
-        Event:FireServer()
+game:GetService("ReplicatedStorage").Remotes.Sell:FireServer()
 task.wait()
-    end
-end)
-while task.wait() do
-    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Notificaciones:GetChildren()) do
-        if v.Name == "NewSell" then
-            v:Destroy()
         end
-    end
-end
+    end)
 end)
 
 
@@ -65,18 +57,7 @@ end)
 
 
 
-section1:addToggle("Autofarm", nil, function(value)
-    spawn(function()
-    getgenv().autofarm = value
-    while true do
-        if not getgenv().autofarm then break end
-        local A_1 = 1
-        local Event = game:GetService("ReplicatedStorage").CoinToPlayer
-        Event:FireServer(A_1)
-        task.wait()
-    end
-end)
-end)
+
 
 section1:addToggle("Auto Buy Cosmos", nil, function(value)
     spawn(function()
