@@ -43,6 +43,13 @@ section1:addToggle("Auto sell", nil, function(value)
 task.wait()
     end
 end)
+while task.wait() do
+    for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Notificaciones:GetChildren()) do
+        if v.Name == "NewSell" then
+            v:Destroy()
+        end
+    end
+end
 end)
 
 
