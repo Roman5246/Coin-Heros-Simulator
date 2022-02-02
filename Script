@@ -1,7 +1,3 @@
-local box = messagebox("do u want to load?", "Eich Hub",4)
-
-if box == 6 then
-local LocalPlayer = game.Players.LocalPlayer
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
@@ -13,12 +9,11 @@ local Gui = Library:AddGui({
 })
 
 local MainTab = Gui:AddTab("Main")
-local PlayerTab = Gui:AddTab("Player")
 
 
 
 local CategoryMain = MainTab:AddCategory("Main")
-local CategoryPlayer = PlayerTab:AddCategory("Player")
+
 
 
 
@@ -115,5 +110,4 @@ task.wait()
     end
 end)
 end) 
-
 
